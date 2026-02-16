@@ -632,134 +632,77 @@ footer {
 
     .hero-container {
         flex-direction: column-reverse;
-        text-align: center;
+        text-align: left;
+        /* Left align container */
         gap: 20px;
         padding-top: 0;
     }
 
     .hero-content {
         margin-top: 0;
+        align-items: flex-start;
+        /* Left align flex items */
     }
 
     /* Aggressive Spacing Reduction */
     .section {
         padding: 40px 0;
-        /* Significantly reduced from 80px */
     }
 
     .section-title {
         font-size: 1.8rem;
-        /* Slightly smaller for mobile context */
         margin-bottom: 25px;
+        text-align: center;
+        /* Keep section titles centered */
     }
 
     .skills-grid,
     .projects-grid {
         gap: 15px;
-        /* Tighter grid */
     }
 
-    .skill-card,
-    .project-card,
-    .timeline-content,
-    .education-card,
     .info-grid {
-        padding: 20px;
-        /* Reduced internal padding */
-    }
-
-    /* Visual Enhancements */
-    .name {
-        font-size: 2rem;
-        color: #fff;
-        /* Brighter white */
-        text-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
-        /* Subtle glow */
-        margin-top: 10px;
-    }
-
-    .description {
-        font-size: 1rem;
-        color: #e5e7eb;
-        /* Brighter gray */
-        margin-bottom: 25px;
-        line-height: 1.5;
-    }
-
-    .hero-image,
-    .image-wrapper {
-        display: none !important;
-        /* Ensure old image is gone */
-    }
-
-    /* Premium Glassmorphism Cards for Mobile */
-    .skill-card,
-    .project-card,
-    .timeline-content,
-    .education-card,
-    .info-grid {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .skills-grid,
-    .projects-grid {
-        gap: 15px;
-        /* Tighter grid */
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     }
 
     .hero-btns {
-        justify-content: center;
+        justify-content: flex-start;
+        /* Left align buttons */
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 15px;
         width: 100%;
-        /* Ensure buttons take available width if needed */
     }
 
     /* Larger touch targets for mobile */
     .btn {
-        padding: 14px 28px;
-        font-size: 1rem;
+        padding: 14px 20px;
+        /* Adjusted padding */
+        font-size: 0.95rem;
+        /* Slightly smaller font to fit side-by-side */
         flex: 1;
-        /* Equal width buttons */
         max-width: 160px;
-        /* Prevent them from getting too wide */
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
     .description {
         font-size: 1.05rem;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
         line-height: 1.6;
-        /* Better readability */
-        padding: 0 10px;
-    }
-
-    .about-text p {
-        font-size: 1rem;
-        line-height: 1.7;
+        padding: 0;
+        /* Remove side padding */
         text-align: left;
-        /* Easier to read on mobile than centered */
+        /* Explicitly left align */
+        color: #d1d5db;
     }
 
     .social-links {
         margin-top: 30px;
         gap: 25px;
-        /* Larger gap for touch */
-        justify-content: center;
+        justify-content: flex-start;
+        /* Left align social links */
     }
 
     .social-links a {
