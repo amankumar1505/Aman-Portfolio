@@ -557,33 +557,66 @@ footer {
         padding: 50px 0;
     }
 
-    /* Mobile Header & Banner */
+    /* Mobile Header & Banner (Side-by-Side) */
     .mobile-banner {
         display: block;
         width: 100%;
-        height: 140px;
-        /* Rectangular banner height */
-        background: linear-gradient(135deg, var(--bg-alt), #1a1a1a);
+        height: auto;
+        padding: 20px;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        /* Rich Premium Gradient */
         position: relative;
-        margin-bottom: 60px;
-        /* Space for the avatar to overlap */
-        border-bottom: 1px solid var(--border);
+        margin-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .banner-content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        max-width: 100%;
     }
 
     .banner-avatar {
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
-        border: 4px solid var(--bg-color);
-        /* Match bg to create "cutout" look */
-        position: absolute;
-        bottom: -60px;
-        /* Half overlapping */
-        left: 50%;
-        transform: translateX(-50%);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        border: 3px solid rgba(255, 255, 255, 0.2);
         object-fit: cover;
-        object-position: center 20%;
+        position: static;
+        /* Reset absolute positioning */
+        transform: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .banner-text {
+        text-align: left;
+        flex: 1;
+    }
+
+    .banner-text h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: #fff;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .banner-text p {
+        font-size: 0.9rem;
+        color: var(--accent);
+        /* Pop of color */
+        font-weight: 600;
+        margin: 0;
+        letter-spacing: 0.5px;
+    }
+
+    /* Hide redundant hero text on mobile since it's in the banner now */
+    .hero-content .greeting,
+    .hero-content .name,
+    .hero-content .title {
+        display: none;
     }
 
     .hero {
@@ -591,16 +624,13 @@ footer {
         background: transparent;
         height: auto;
         padding-bottom: 40px;
-        /* Reduced padding */
         min-height: auto;
-        /* Remove 100vh requirement for mobile */
     }
 
     .hero-container {
         flex-direction: column-reverse;
         text-align: center;
         gap: 20px;
-        /* Reduced gap */
         padding-top: 0;
     }
 
