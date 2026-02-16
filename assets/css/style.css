@@ -65,6 +65,7 @@ ul {
     position: relative;
     background: linear-gradient(to right, var(--primary), var(--accent));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -162,6 +163,7 @@ ul {
     margin-bottom: 10px;
     background: linear-gradient(to right, #fff, #aaa);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -529,6 +531,20 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        gap: 20px;
+    }
+
     .nav-links {
         display: none;
     }
@@ -544,6 +560,13 @@ footer {
         padding: 20px 0;
         border-top: 1px solid var(--border);
         animation: slideDown 0.3s ease forwards;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
     }
 
     @keyframes slideDown {
@@ -565,32 +588,45 @@ footer {
     .hero {
         height: auto;
         padding-top: 120px;
-        padding-bottom: 50px;
+        padding-bottom: 60px;
+        min-height: 100vh;
     }
 
     .hero-container {
         flex-direction: column-reverse;
         text-align: center;
+        gap: 30px;
     }
 
     .hero-image {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        width: 100%;
+        justify-content: center;
     }
 
     .image-wrapper {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
         margin: 0 auto;
+        border-width: 3px;
     }
 
     .hero-btns {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
     .hero-content {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+    }
+
+    .description {
+        font-size: 1rem;
+        margin-bottom: 30px;
     }
 
     .social-links {
@@ -599,7 +635,12 @@ footer {
     }
 
     .name {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .title {
+        font-size: 1.5rem;
     }
 }
 
